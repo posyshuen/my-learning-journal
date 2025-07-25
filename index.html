@@ -8,29 +8,39 @@
 			rel="stylesheet" />
 	</head>
 	<body>
-		<header>
-			<div class="logo-website-name-container">
-				<img src="images/logo.png" alt="My Learning Journal Logo" class="logo" />
-				<h6>My Learning Journal</h6>
+		<nav id="nav-bar">
+			<div id="logo-website-name-container">
+				<img src="images/logo.png" alt="My Learning Journal Logo" id="logo" />
+				<h5>My Learning Journal</h5>
 			</div>
 
 			<ul>
 				<li><a href="index.html">Home</a></li>
 				<li><a href="about.html">About</a></li>
 			</ul>
-		</header>
+		</nav>
 
 		<main>
-			<section class="hero">
-				<p class="blog-date">July 24, 2025</p>
-				<h1 class="blog-title">My new journey as a bootcamp student.</h1>
-				<p class="blog-preview">
-					"Today marks the beginning of my journey as a bootcamp student. I am excited to learn new skills and meet new
-					people. This journal will document my progress and experiences throughout the course."
+			<section id="hero">
+				<p id="hero-date">July 24, 2025</p>
+				<h2 id="hero-title">hero blog title hero blog title hero blog title</h2>
+				<p id="hero-preview">
+					After several months of learning in the Frontend Developer Career Path, I've made the big jump over to the
+					Bootcamp to get expert code reviews of my Solo Projects projects and meet like-minded peers.
 				</p>
 			</section>
 
-			<section class="content"></section>
+			<section class="content">
+				<div class="blog-card">
+					<img src="images/blog/coding.png" alt="Bootcamp Image" id="blog-image" />
+					<p id="blog-date">July 24, 2025</p>
+					<h3 id="blog-title">Blog title one</h3>
+					<p id="blog-preview">
+						I'm excited to start a new learning journey as a Scrimba Bootcamp student! After several months of learning
+						in the Frontend Developer Career Path.
+					</p>
+				</div>
+			</section>
 		</main>
 
 		<footer>
@@ -42,5 +52,6 @@
 				</script>
 			</p>
 		</footer>
+		<script src="index.js" type="module"></script>
 	</body>
 </html>
