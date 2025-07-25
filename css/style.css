@@ -1,0 +1,95 @@
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+
+/* Fonts */
+
+h1 {
+	font-family: "Source Sans 3", sans-serif;
+	font-weight: 700;
+	font-size: 2.5rem;
+	line-height: 0.5;
+	letter-spacing: -0.03em;
+}
+
+h6 {
+	font-family: "Roboto", sans-serif;
+	font-weight: 600;
+	font-size: 1rem;
+	line-height: 0;
+}
+
+header ul li a {
+	font-family: "Source Sans 3", sans-serif;
+	font-weight: 600;
+	text-decoration: none;
+	font-size: 1rem;
+}
+
+p {
+	font-family: "Source Sans 3", sans-serif;
+	font-weight: 400;
+}
+
+/* Nav Bar */
+
+header {
+	display: flex;
+	background-color: #f2f2f2;
+	padding: 0 2rem;
+	align-items: center;
+	justify-content: space-between;
+}
+
+header,
+header ul li a {
+	color: black;
+}
+
+.logo-website-name-container {
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+}
+
+.logo {
+	width: 20px;
+	height: 20px;
+	background-size: cover;
+}
+
+header ul {
+	display: flex;
+	list-style: none;
+	gap: 1.5rem;
+}
+
+header ul li a {
+	text-decoration: none;
+	text-transform: uppercase;
+}
+
+header ul li a:hover {
+	color: dimgray;
+}
+
+/* Main Content */
+main {
+	padding: 1rem 2rem;
+}
+
+/* Footer */
+footer {
+	background-color: #333;
+	color: white;
+	padding: 0.5rem 2rem;
+	text-align: center;
+}
+
+footer p {
+	margin: 0;
+	font-size: 0.75rem; /* 12px */
+	color: #d7d7d7;
+}
