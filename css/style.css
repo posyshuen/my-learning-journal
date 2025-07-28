@@ -4,6 +4,10 @@ body {
 	padding: 0;
 }
 
+main {
+	padding-top: 60px;
+}
+
 /* Fonts */
 
 h2 {
@@ -48,12 +52,15 @@ p {
 	font-family: "Source Sans 3", sans-serif;
 	font-weight: 400;
 	text-wrap: pretty;
+	font-size: 1rem;
+	line-height: 1.5;
 }
 
 /* Nav Bar */
 
 #nav-bar {
 	width: 100%;
+	height: 60px;
 	box-sizing: border-box;
 	display: flex;
 	background-color: #f2f2f2;
@@ -100,51 +107,80 @@ p {
 	display: flex;
 	flex-direction: column;
 	justify-content: end;
-	height: 320px;
+	height: 400px;
 	padding: 1rem 1.5rem;
-	background: linear-gradient(0deg, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.3) 100%),
-		url("/images/blog/coding-nice-sky.png") lightgray 50% / cover no-repeat;
 	background-size: cover;
 	background-position: 50% 90%;
-}
-
-#hero #hero-date,
-#hero #hero-preview,
-#hero #hero-title {
 	color: white;
 }
 
-/* Main Content */
-.content {
+#hero-preview {
+	font-size: 1rem;
+	margin-top: 0;
+}
+
+#hero-date {
+	font-size: 0.875rem; /* 14px */
+	text-transform: uppercase;
+	margin: 0;
+}
+
+/* Home Main Content */
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+.blog-cards-container {
 	padding: 1.5rem;
-	display: flex;
-	flex-direction: column;
+	display: grid;
+	grid-template-columns: 1fr;
 	gap: 1.5rem;
 }
 
-#hero-image,
-#blog-image {
+/* Blog Cards */
+
+.blog-img {
 	width: 100%;
-	height: auto;
+	height: 280px;
+	object-fit: cover;
 	border-radius: 0.25rem; /* 4px */
 	margin-bottom: 1rem;
 }
 
-#hero-date,
-#blog-date {
+.blog-date {
 	font-size: 0.875rem; /* 14px */
 	text-transform: uppercase;
 	color: gray;
 	margin: 0;
 }
 
-#hero-preview,
-#blog-preview {
+.blog-preview {
 	font-size: 1rem;
 	color: #505050;
 	margin-top: 0;
 }
 
+/* About Main Content */
+#about,
+#about-content {
+	display: flex;
+	flex-direction: column;
+	padding: 2rem 1.5rem;
+	text-align: left;
+}
+
+#about-content {
+	gap: 2rem;
+}
+
+#avatar {
+	width: 150px;
+	height: 150px;
+	border-radius: 50%;
+	border: 4px solid white;
+	margin-bottom: 1rem;
+}
 /* Footer */
 footer {
 	display: flex;
@@ -162,4 +198,34 @@ footer p {
 	margin: 0;
 	font-size: 0.75rem; /* 12px */
 	color: #d7d7d7;
+}
+
+/* Responsive Design */
+
+@media (min-width: 768px) {
+	#hero {
+		min-height: 400px;
+		max-height: 800px;
+	}
+	.blog-cards-container {
+		grid-template-columns: 1fr 1fr;
+		/* grid-template-rows: minmax(400px, auto); */
+	}
+	.blog-img {
+		max-height: 320px;
+	}
+}
+
+@media (min-width: 1024px) {
+	#hero {
+		min-height: 600px;
+		max-height: 1000px;
+	}
+	.blog-cards-container {
+		grid-template-columns: 1fr 1fr 1fr;
+		/* grid-template-rows: minmax(600px, auto); */
+	}
+	.blog-img {
+		max-height: 400px;
+	}
 }
