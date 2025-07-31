@@ -2,25 +2,31 @@ import {blogPosts} from "/js/blog-data.js"
 
 const hero = document.querySelector("#hero")
 const blogCardsContainer = document.querySelector(".blog-cards-container")
+const blogPostsReversed = blogPosts.reverse()
 
-function renderBlogPost() {
-	const latestPost = blogPosts.pop()
+function renderHeroBlogPost() {
+	const latestPost = blogPostsReversed[0]
 	const {date, title, preview, image} = latestPost
 	hero.style.backgroundImage = `url(${image})`
 	const heroHTML = `
-	<a href="/blog/${latestPost.slug}">
+	<a href="/${latestPost.slug}.html">
 	<p id="hero-date">${date}</p>
 				<h2 id="hero-title">${title}</h2>
 				<p id="hero-preview">
 					${preview}
 				</p></a>
 				`
-	const blogHTML = blogPosts
-		.slice(1) // Skip the latest post for the blog cards
+
+	hero.innerHTML = heroHTML
+}
+
+function renderBlogPost(blogPostsReversed, limit = null) {
+	const postsToRender = limit ? blogPostsReversed.slice(0, limit) : blogPostsReversed.slice(1)
+	const blogHTML = postsToRender
 		.map(post => {
-			const {image, alt, date, title, preview} = post
+			const {image, alt, date, title, preview, slug} = post
 			return `
-			<a href="/blog/${post.slug}">
+			<a href="/${slug}.html">
 				<div class="card">
 					<img src="${image}" alt="${alt}" class="blog-img" />
 					<p class="blog-date">${date}</p>
@@ -33,8 +39,12 @@ function renderBlogPost() {
 		})
 		.join(" ")
 
-	hero.innerHTML = heroHTML
 	blogCardsContainer.innerHTML += blogHTML
 }
 
-renderBlogPost()
+if (hero) {
+	renderHeroBlogPost()
+	renderBlogPost(blogPostsReversed)
+}
+
+renderBlogPost(blogPostsReversed, 3)

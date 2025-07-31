@@ -1,6 +1,7 @@
 export const blogPosts = [
 	{
 		title: "Blog title one",
+		slug: "blog-title-one",
 		date: "July 24, 2025",
 		image: "images/blog/coding.png",
 		alt: "Bootcamp Image",
@@ -9,6 +10,7 @@ export const blogPosts = [
 	},
 	{
 		title: "Blog title two",
+		slug: "blog-title-two",
 		date: "July 25, 2025",
 		image: "images/blog/desert.png",
 		alt: "Bootcamp Image",
@@ -17,6 +19,7 @@ export const blogPosts = [
 	},
 	{
 		title: "Blog title three",
+		slug: "blog-title-three",
 		date: "July 26, 2025",
 		image: "images/blog/light-bulb.png",
 		alt: "Bootcamp Image",
@@ -25,6 +28,7 @@ export const blogPosts = [
 	},
 	{
 		title: "Blog title four",
+		slug: "blog-title-four",
 		date: "July 27, 2025",
 		image: "images/blog/macbook.png",
 		alt: "Bootcamp Image",
@@ -33,6 +37,7 @@ export const blogPosts = [
 	},
 	{
 		title: "Blog title five",
+		slug: "blog-title-five",
 		date: "July 28, 2025",
 		image: "images/blog/purple-sky.png",
 		alt: "Bootcamp Image",
@@ -41,6 +46,7 @@ export const blogPosts = [
 	},
 	{
 		title: "Blog title six",
+		slug: "blog-title-six",
 		date: "July 29, 2025",
 		image: "images/blog/react.png",
 		alt: "Bootcamp Image",
@@ -49,6 +55,7 @@ export const blogPosts = [
 	},
 	{
 		title: "Blog title seven",
+		slug: "blog-title-seven",
 		date: "July 30, 2025",
 		image: "images/blog/coding-nice-sky.png",
 		alt: "Bootcamp Image",
